@@ -18,7 +18,7 @@ attr_accessor :name, :songs
 		song = Song.new
 		song.genre = Genre.new
 		binding.pry
-		self.genres song.genre
+		artist.genres song.genre
 	end
 
 
