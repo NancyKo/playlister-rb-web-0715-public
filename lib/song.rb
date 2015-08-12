@@ -9,6 +9,6 @@ attr_accessor :genre, :name, :artist
 	end
 
 	def genre
-    # genre = Genre.new.tap { |g| g.name = 'rap' }
+    
 	end
 end
