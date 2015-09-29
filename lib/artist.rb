@@ -17,6 +17,9 @@ attr_accessor :name, :songs, :genres
 		@@all.count
 	end
 
+	def self.unique
+		@all.unique
+	end
 	def initialize
 		@name = name
 		@songs = []
@@ -26,14 +29,7 @@ attr_accessor :name, :songs, :genres
 
 	def add_song(song)
 		@songs << song
-		song.artist = self 
-	end
-
-	def genres
-		song = Song.new 
-		self.add_song(song)
 		@genres << song.genre
+		song.genre.artists << self if song.genre
 	end
-
-
 end
